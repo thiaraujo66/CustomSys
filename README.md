@@ -2,12 +2,17 @@
 # Sistema de Gestão de Clientes
 
 ## Visão Geral
-Bem-vindo ao projeto Sistema de Gestão de Clientes! Este empreendimento faz parte do desenvolvimento do meu portfólio, focado em criar um sistema eficiente e limpo de gestão de clientes utilizando tecnologias da Microsoft. Adotando os princípios de Clean Code e Clean Architecture, este projeto visa demonstrar as melhores práticas em design e desenvolvimento de software.
+Bem-vindo ao projeto Sistema de Gestão de Clientes! Este projeto faz parte do desenvolvimento do meu portfólio, focado em criar um sistema eficiente e limpo de gestão de clientes utilizando tecnologias da Microsoft. Adotando os princípios de Clean Code e Clean Architecture, este projeto visa demonstrar as melhores práticas em design e desenvolvimento de software.
 
 ## Tecnologias Utilizadas
 - **Banco de Dados:** Microsoft SQL Server
 - **Backend:** .NET 7.0
 - **Framework Web:** ASP.NET MVC
+
+## Parâmetros Adotados para o Desenvolvimento do Sistema
+- **O sistema não deve gerenciar os funcionários da empresa**
+- **O sistema deve cadastrar, alterar e consultar os clientes**
+- **O sistema deve armazenar o cpf/cnpj do cliente como chave primaria da tabela de clientes**
 
 ## Recursos
 - Gestão eficiente de dados de clientes.
