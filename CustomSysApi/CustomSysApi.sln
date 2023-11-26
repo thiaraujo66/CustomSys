@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSysApi", "CustomSysApi\CustomSysApi.csproj", "{9DB18C22-4C2E-448F-937A-F0C43650C929}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomSysApi", "CustomSysApi\CustomSysApi.csproj", "{9DB18C22-4C2E-448F-937A-F0C43650C929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3739D6A4-5579-49D8-8698-708913631DA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{3739D6A4-5579-49D8-8698-708913631DA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{C2ADBF1E-2761-4F68-B96F-4426B563A9C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{C2ADBF1E-2761-4F68-B96F-4426B563A9C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Repository", "Infra.Repository\Infra.Repository.csproj", "{71F024EA-F8AA-4895-A358-8141C8294F7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.Repository", "Infra.Repository\Infra.Repository.csproj", "{71F024EA-F8AA-4895-A358-8141C8294F7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSysApi.Test", "CustomSysApi.Test\CustomSysApi.Test.csproj", "{B47F91AF-F371-4E0B-B26A-C36B3F4D1BE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{71F024EA-F8AA-4895-A358-8141C8294F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71F024EA-F8AA-4895-A358-8141C8294F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71F024EA-F8AA-4895-A358-8141C8294F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B47F91AF-F371-4E0B-B26A-C36B3F4D1BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B47F91AF-F371-4E0B-B26A-C36B3F4D1BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B47F91AF-F371-4E0B-B26A-C36B3F4D1BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B47F91AF-F371-4E0B-B26A-C36B3F4D1BE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
