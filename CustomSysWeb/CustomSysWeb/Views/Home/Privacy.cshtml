@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Sobre";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h2>Sistema de Gestão de Clientes</h2>
+
+<h3>Visão Geral</h3>
+<p>Bem-vindo ao projeto Sistema de Gestão de Clientes! Este projeto faz parte do desenvolvimento do meu portfólio, focado em criar um sistema eficiente e limpo de gestão de clientes utilizando tecnologias da Microsoft. Adotando os princípios de Clean Code e Clean Architecture, este projeto visa demonstrar as melhores práticas em design e desenvolvimento de software.</p>
+
+<h3>Tecnologias Utilizadas</h3>
+<ul>
+    <li><strong>Banco de Dados:</strong> Microsoft SQL Server</li>
+    <li><strong>Backend:</strong> .NET 7.0</li>
+    <li><strong>Framework Web:</strong> ASP.NET MVC</li>
+</ul>
+
+<h3>Recursos</h3>
+<ul>
+    <li>Gestão eficiente de dados de clientes.</li>
+    <li>Utilização dos princípios de Clean Code para manutenibilidade e legibilidade.</li>
+    <li>Design de Clean Architecture para promover a separação de preocupações e escalabilidade.</li>
+</ul>
+
+<h3>Parâmetros Adotados para o Desenvolvimento do Sistema</h3>
+<ul>
+    <li>O sistema não deve gerenciar os funcionários da empresa.</li>
+    <li>O sistema deve cadastrar, alterar e consultar os clientes.</li>
+    <li>O sistema deve armazenar o cpf/cnpj do cliente como chave primaria da tabela de clientes.</li>
+    <li>O sistema possui exclusão lógica e exclusão virtual, deixando a critério do Owner do sistema decidir qual utilizar, levando em consideração que a exclusão lógica causa menos problemas e reteem dados, já a exclusão física auxilia na diminuição do tamanho no banco de dados e performance do sistema.</li>
+    <li>O sistema não permite a alteração do CPF/CNPJ do cliente uma vez que adicionado ao sistema, para isso, deve-se adicionar um novo registro com o CPF/CNPJ novo.</li>
+    <li></li>
+</ul>
+<h3>Como Começar</h3>
+<ol>
+    <li>Clone este repositório em sua máquina local.</li>
+    <li>Configure seu banco de dados Microsoft SQL Server.</li>
+    <li>Abra a solução no Visual Studio com .NET 7.0 instalado.</li>
+    <li>Adicione os dados referentes à string de conexão do banco de dados na API</li>
+    <li>Certifique-se que o URL da API seja https://localhost:44338/</li>
+    <li>Compile e execute a aplicação.</li>
+</ol>
+
+<h3>Clean Code e Clean Architecture</h3>
+<p>Este projeto adere aos princípios de Clean Code e Clean Architecture, garantindo uma base de código bem organizada e de fácil manutenção. Sinta-se à vontade para explorar o código-fonte e ver como essas práticas são implementadas.</p>
+
+<h3>Contribuições</h3>
+<p>Contribuições e feedback são bem-vindos! Se encontrar algum problema ou tiver sugestões de melhorias, por favor, abra uma issue ou envie um pull request.</p>
+
+<h3>Licença</h3>
+<p>Não há necessidade de licença para utilização deste projeto</p>
+
+<p>Obrigado e se sinta a vontade para explorar o projeto Sistema de Gestão de Clientes!</p>

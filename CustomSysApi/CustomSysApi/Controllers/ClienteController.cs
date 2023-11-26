@@ -124,29 +124,29 @@ namespace CustomSysApi.Controllers
             }
         }
 
-        [HttpDelete("DelCliente")]
+        [HttpDelete("DelCliente/{id}")]
         [ProducesResponseType(typeof(BaseReturn<string>), 200)]
-        public async Task<ActionResult> ExcluirCliente(ByIdRequest<string> input)
+        public async Task<ActionResult> ExcluirCliente(string id)
         {
             try
             {
                 List<Clientes> clientes = new List<Clientes>
                 {
-                    await _clienteUseCase.GetById(input.Id)
+                    await _clienteUseCase.GetById(id)
                 };
 
                 if (clientes.Count < 0)
-                    return BadRequest(new BaseReturn<Clientes>() { IsSucces = false, Status = "Não foi possível localizar o cliente com id: " + input.Id, Data = null });
+                    return BadRequest(new BaseReturn<Clientes>() { IsSucces = false, Status = "Não foi possível localizar o cliente com id: " + id, Data = null });
 
                 if (string.IsNullOrEmpty(clientes.FirstOrDefault().Clid))
-                    return BadRequest(new BaseReturn<Clientes>() { IsSucces = false, Status = "Não foi possível localizar o cliente com id: " + input.Id, Data = null });
+                    return BadRequest(new BaseReturn<Clientes>() { IsSucces = false, Status = "Não foi possível localizar o cliente com id: " + id, Data = null });
 
                 _clienteUseCase.Excluir(clientes.FirstOrDefault());
 
                 if (await _clienteUseCase.SaveAllAsync())
                     return Ok(new BaseReturn<Clientes>() { IsSucces = true, Status = "Cliente excluído com sucesso", Data = null });
 
-                return BadRequest(new BaseReturn<Clientes>() { IsSucces = false, Status = "Não foi possível excluír o cliente com id: " + input.Id, Data = null });
+                return BadRequest(new BaseReturn<Clientes>() { IsSucces = false, Status = "Não foi possível excluír o cliente com id: " + id, Data = null });
 
             }
             catch (Exception ex)

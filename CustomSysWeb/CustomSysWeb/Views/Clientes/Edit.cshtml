@@ -1,0 +1,100 @@
+﻿@model CustomSysWeb.Models.Cliente
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Alteração</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="CdUsuCad" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">Nome</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">E-mail</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cgc" class="control-label">CPF/CNPJ</label>
+                <input asp-for="Cgc" class="form-control" readonly="readonly"/>
+                <span asp-validation-for="Cgc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexo" class="control-label">Sexo</label>
+                <select asp-for="Sexo" class="form-control">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label">Telefone</label>
+                <input asp-for="Telefone" class="form-control" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Obs" class="control-label">Observações</label>
+                <input asp-for="Obs" class="form-control" />
+                <span asp-validation-for="Obs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoCliente.Id" class="control-label">Código do Tipo de Cliente</label>
+                <input asp-for="TipoCliente.Id" class="form-control" />
+                <span asp-validation-for="TipoCliente.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SituacaoCliente.Id" class="control-label">Código da Situação do Cliente</label>
+                <input asp-for="SituacaoCliente.Id" class="form-control" />
+                <span asp-validation-for="SituacaoCliente.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nacionalidade.Id" class="control-label">Código da Nacionalidade</label>
+                <input asp-for="Nacionalidade.Id" class="form-control" />
+                <span asp-validation-for="Nacionalidade.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereco.Id" class="control-label">Código do Endereço</label>
+                <input asp-for="Endereco.Id" class="form-control" />
+                <span asp-validation-for="Endereco.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtNasc" class="control-label">Data de Nascimento</label>
+                <input asp-for="DtNasc" class="form-control" />
+                <span asp-validation-for="DtNasc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtCad" class="control-label">Data de Cadastro</label>
+                <input asp-for="DtCad" class="form-control" readonly="readonly" />
+                <span asp-validation-for="DtCad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Excluido" class="control-label">Excluído</label>
+                <select asp-for="Excluido" class="form-control">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                <span asp-validation-for="Excluido" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <input type="submit" value="Save" class="btn btn-primary" style="margin-right: 10px;" />
+                <a asp-action="Index" class="btn btn-danger">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

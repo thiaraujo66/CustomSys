@@ -43,7 +43,7 @@ namespace Infra.Repository.Repositories.Cliente
 
         public async Task<IEnumerable<Clientes>> SelecionarTodos()
         {
-            return await _context.Clientes.Include(c => c.ClcdenderecoNavigation).Include(c => c.ClcdsituacaoNavigation).Include(c => c.ClcdtipoclienteNavigation).Include(c => c.ClnacionalidadeNavigation).Include(c => c.ClcdusucadNavigation).Include(c => c.ClcdusualtNavigation).ToListAsync();
+            return await _context.Clientes.Include(c => c.ClcdenderecoNavigation).Include(c => c.ClcdsituacaoNavigation).Include(c => c.ClcdtipoclienteNavigation).Include(c => c.ClnacionalidadeNavigation).Include(c => c.ClcdusucadNavigation).Include(c => c.ClcdusualtNavigation).Where(c => c.Clexcluido.Equals(false)).ToListAsync();
         }
     }
 }

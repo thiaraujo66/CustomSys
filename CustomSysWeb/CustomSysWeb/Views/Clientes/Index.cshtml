@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CustomSysWeb.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clientes</h1>
+
+@if (TempData["SucessoMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SucessoMessage"]
+    </div>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Incluir</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.Label("Código")
+            </th>
+            <th>
+                @Html.Label("Nome")
+            </th>
+            <th>
+                @Html.Label("E-mail")
+            </th>
+            <th>
+                @Html.Label("Sexo")
+            </th>
+            <th>
+                @Html.Label("CPF/CNPJ")
+            </th>
+            <th>
+                @Html.Label("Situação do Cliente")
+            </th>
+            <th>
+                @Html.Label("Tipo do Cliente")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cgc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SituacaoCliente.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoCliente.Nome)
+                </td>
+                <td class="col-sm-3">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

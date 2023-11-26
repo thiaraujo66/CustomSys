@@ -1,0 +1,111 @@
+﻿@model CustomSysWeb.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Tem certeza que deseja excluir esse registro ?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.Label("Código do Cliente")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Nome")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("E-mail")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("CPF/CNPJ")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cgc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Sexo")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SexoDescricao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Telefone")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Obs")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Obs)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Tipo de Cliente")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TipoCliente.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Situação do Cliente")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SituacaoCliente.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Nacionalidade")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nacionalidade.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Endereco")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.EnderecoCompleto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("DtNasc")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtNasc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("DtCad")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtCad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("DtAlt")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtAlt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.Label("Excluido")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Excluido)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" style="margin-right: 10px;" />
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </form>
+</div>
