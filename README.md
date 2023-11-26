@@ -13,6 +13,8 @@ Bem-vindo ao projeto Sistema de Gestão de Clientes! Este projeto faz parte do d
 - **O sistema não deve gerenciar os funcionários da empresa**
 - **O sistema deve cadastrar, alterar e consultar os clientes**
 - **O sistema deve armazenar o cpf/cnpj do cliente como chave primaria da tabela de clientes**
+- **O sistema possui exclusão lógica e exclusão virtual, deixando a critério do Owner do sistema decidir qual utilizar, levando em consideração que a exclusão lógica causa menos problemas e reteem dados, já a exclusão física auxilia na diminuição do tamanho no banco de dados e performance do sistema.**
+- **O sistema não permite a alteração do CPF/CNPJ do cliente uma vez que adicionado ao sistema, para isso, deve-se adicionar um novo registro com o CPF/CNPJ novo.**
 
 ## Recursos
 - Gestão eficiente de dados de clientes.
